@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education | Yash Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="page">
+    <a href="index.html" class="back-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+    <h1 data-aos="fade-down" data-aos-duration="1000">My Education</h1>
+
+    <div class="edu-timeline">
+      <div class="edu-line"></div>
+
+      <!-- MIT AOE -->
+      <div class="edu-item" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="assets/mitaoe.jpeg" alt="MIT AOE Pune">
+        <div class="edu-info">
+          <h3>MIT Academy of Engineering, Pune</h3>
+          <p><strong>B.Tech - Mechanical Engineering</strong><br>2023 – 2027<br>
+          Exploring innovation at the intersection of AI and Mechanical Systems.</p>
+        </div>
+        <div class="dot"></div>
+      </div>
+
+      <!-- Janata -->
+      <div class="edu-item" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="assets/jmvc.jpeg" alt="Janata Mahavidyalaya Chandrapur">
+        <div class="edu-info">
+          <h3>Janata Mahavidyalaya, Chandrapur</h3>
+          <p><strong>Higher Secondary (Science)</strong><br>2021 – 2023<br>
+          Focused on Physics, Mathematics, and Computer fundamentals with distinction.</p>
+        </div>
+        <div class="dot"></div>
+      </div>
+
+      <!-- KV -->
+      <div class="edu-item" data-aos="zoom-in" data-aos-duration="1000">
+        <img src="assets/kvwcl.jpeg" alt="Kendriya Vidyalaya Chandrapur">
+        <div class="edu-info">
+          <h3>Kendriya Vidyalaya, Chandrapur</h3>
+          <p><strong>Secondary Education (CBSE)</strong><br>Completed in 2021<br>
+          Built strong academic foundation in reasoning and applied sciences.</p>
+        </div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.body.classList.add('fade-in');
+    window.addEventListener('beforeunload', () => {
+      document.body.classList.add('fade-out');
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+window.addEventListener("load", () => {
+  document.body.classList.add("fade-in");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Yash Portfolio</title>
+
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="page">
+    <a href="index.html" class="back-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+    <h1 data-aos="fade-down" data-aos-duration="1000">My Experience</h1>
+
+    <div class="exp-grid">
+
+      <!-- 🔹 NIT Trichy -->
+      <div class="exp-card" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/nitt.jpeg" alt="NIT Trichy">
+        <div class="exp-info">
+          <h3>Research Intern — NIT Trichy</h3>
+          <p>Worked on the development of an AI-driven real-time biomass gasification control system, integrating data acquisition with predictive modeling to improve system efficiency and sustainability.</p>
+        </div>
+      </div>
+
+      <!-- 🔹 SAIL Internship (with real Chandrapur image) -->
+      <div class="exp-card" data-aos="fade-left" data-aos-duration="1000">
+        <img src="https://sail.co.in/sites/default/files/banner/2020-07/Chandrapur-Ferro-Alloy-Plant_0.jpg" alt="SAIL Chandrapur Plant">
+        <div class="exp-info">
+          <h3>Intern — Steel Authority of India Limited (SAIL)</h3>
+          <p>Analyzed production processes, machine operations, and mechanical workflows at the <strong>Chandrapur Ferro Alloy Plant</strong>. Gained hands-on experience in manufacturing systems, mechanical maintenance, and plant optimization under the Mechanical Department.</p>
+        </div>
+      </div>
+
+      <!-- 🔹 Innovate Internship -->
+      <div class="exp-card" data-aos="fade-right" data-aos-duration="1000">
+        <img src="assets/innovate.png" alt="Innovate Internship">
+        <div class="exp-info">
+          <h3>Web Developer Intern — Innovate Internship</h3>
+          <p>Developed a full-stack web application for <strong>Click-Through Rate (CTR) Prediction</strong> using machine learning models. Designed the front-end using React and integrated the predictive backend via FastAPI to deliver real-time ad performance insights.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Page Fade Transition -->
+  <script>
+    document.body.classList.add('fade-in');
+    window.addEventListener('beforeunload', () => {
+      document.body.classList.add('fade-out');
+    });
+  </script>
+
+  <!-- AOS.js -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+window.addEventListener("load", () => {
+  document.body.classList.add("fade-in");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Yash Portfolio</title>
+
+  <!-- Fonts, Icons, Animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="page">
+    <a href="index.html" class="back-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+    <h1 data-aos="fade-down" data-aos-duration="1000">My Projects</h1>
+
+    <div class="projects-grid">
+
+      <!-- 🔹 CTR Prediction -->
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/CTR.jpeg" alt="CTR Prediction">
+        <div class="project-content">
+          <h3>Click-Through Rate (CTR) Prediction</h3>
+          <p>Developed a full-stack ML web app predicting ad click probability using <strong>FastAPI</strong> backend and <strong>React</strong> frontend. Integrated live analytics dashboard for ad performance visualization.</p>
+          <div class="project-links">
+            <a href="#" class="btn">View Demo</a>
+            <a href="https://github.com/YashGawande0905" target="_blank" class="btn">View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Solar Performance AI -->
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/SOLAR.jpeg" alt="Solar Performance">
+        <div class="project-content">
+          <h3>AI-Based Solar Performance Prediction</h3>
+          <p>Built an intelligent system to estimate solar thermal performance using weather parameters and regression-based ML models. Implemented data preprocessing and model optimization for accuracy.</p>
+          <div class="project-links">
+            <a href="#" class="btn">View Project</a>
+            <a href="https://github.com/YashGawande0905" target="_blank" class="btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Brain Tumor Detection -->
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/BTDCNN.jpeg" alt="Brain Tumor Detection">
+        <div class="project-content">
+          <h3>Deep Learning Brain Tumor Detection</h3>
+          <p>Implemented a CNN model using <strong>TensorFlow</strong> and <strong>Keras</strong> to classify MRI scans and detect tumor regions. Achieved over 90% accuracy with transfer learning and data augmentation.</p>
+          <div class="project-links">
+            <a href="#" class="btn">View Demo</a>
+            <a href="https://github.com/YashGawande0905" target="_blank" class="btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Mechanical Simulation -->
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000">
+        <img src="assets/ANSYS EXP.jpeg" alt="Mechanical Simulation">
+        <div class="project-content">
+          <h3>Mechanical Simulation & Stress Analysis</h3>
+          <p>Performed simulation and stress analysis on mechanical components using <strong>ANSYS</strong> and <strong>CATIA</strong>. Designed parts and validated mechanical integrity through FEM results.</p>
+          <div class="project-links">
+            <a href="#" class="btn">View Details</a>
+            <a href="https://github.com/YashGawande0905" target="_blank" class="btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Transition -->
+  <script>
+    document.body.classList.add('fade-in');
+    window.addEventListener('beforeunload', () => {
+      document.body.classList.add('fade-out');
+    });
+  </script>
+
+  <!-- AOS Animations -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script>
+window.addEventListener("load", () => {
+  document.body.classList.add("fade-in");
+});
+</script>
+
+</body>
+</html>

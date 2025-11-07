@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Yash Portfolio</title>
+
+  <!-- Icons, Fonts & Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<section class="page">
+  <a href="index.html" class="back-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+  <h1 data-aos="fade-down" data-aos-duration="1000">My Skills</h1>
+
+  <!-- Programming & Web -->
+  <h2 class="skill-title" data-aos="fade-right">Programming & Web</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"><h3>Python</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"><h3>HTML5</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"><h3>CSS3</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"><h3>JavaScript</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"><h3>TypeScript</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"><h3>React</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"><h3>FastAPI</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg"><h3>Flask</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"><h3>GitHub</h3></div>
+  </div>
+
+  <!-- AI / ML -->
+  <h2 class="skill-title" data-aos="fade-right">AI / Machine Learning</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="zoom-in"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg"><h3>Scikit-learn</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Pandas_logo.svg"><h3>Pandas</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/NumPy_logo.svg"><h3>NumPy</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Matplotlib_icon.svg"><h3>Matplotlib</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://seaborn.pydata.org/_static/logo-wide-lightbg.svg"><h3>Seaborn</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Tensorflow_logo.svg"><h3>TensorFlow</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://opencv.org/wp-content/uploads/2020/07/OpenCV_logo_black.png"><h3>OpenCV</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg"><h3>Jupyter</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn-icons-png.flaticon.com/512/2772/2772128.png"><h3>SQL</h3></div>
+  </div>
+
+  <!-- Mechanical & Aerospace Tools -->
+  <h2 class="skill-title" data-aos="fade-right">Mechanical & Aerospace Tools</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="zoom-in"><img src="assets/autocad.jpeg"><h3>AutoCAD</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="assets/fusion 360.png"><h3>Fusion 360</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="assets/catia.png"><h3>CATIA V5</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="assets/ansys.png"><h3>ANSYS</h3></div>
+  </div>
+
+  <!-- Dev Tools & Platforms -->
+  <h2 class="skill-title" data-aos="fade-right">Dev Tools & Platforms</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"><h3>VS Code</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="assets/excel.jpeg"><h3>Excel</h3></div>
+    <div class="skill-card" data-aos="zoom-in"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"><h3>Git</h3></div>
+  </div>
+
+</section>
+
+<script>
+  document.body.classList.add('fade-in');
+  window.addEventListener('beforeunload', () => {
+    document.body.classList.add('fade-out');
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+<script>
+window.addEventListener("load", () => {
+  document.body.classList.add("fade-in");
+});
+</script>
+
+</body>
+</html>

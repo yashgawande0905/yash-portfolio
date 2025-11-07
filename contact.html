@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Yash Portfolio</title>
+
+  <!-- FontAwesome + Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="page contact-page">
+    <a href="index.html" class="back-home"><i class="fa-solid fa-house"></i> Back to Home</a>
+    <h1>Contact Me</h1>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <input type="text" id="name" name="name" placeholder="Your name" required />
+      <input type="email" id="email" name="email" placeholder="Your email" required />
+      <input type="text" id="subject" name="subject" placeholder="Subject" />
+      <textarea id="message" name="message" rows="6" placeholder="Message" required></textarea>
+      <button id="sendBtn" type="submit" class="btn">Send Message</button>
+    </form>
+
+    <div id="formStatus" style="margin-top:1rem; font-size:1.5rem;"></div>
+  </section>
+
+  <!-- JS -->
+  <script>
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+    const sendBtn = document.getElementById('sendBtn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      status.style.color = '';
+      status.textContent = 'Sending…';
+      sendBtn.disabled = true;
+      sendBtn.textContent = 'Sending…';
+
+      const payload = {
+        name: document.getElementById('name').value.trim(),
+        email: document.getElementById('email').value.trim(),
+        subject: document.getElementById('subject').value.trim(),
+        message: document.getElementById('message').value.trim()
+      };
+
+      // basic client validation
+      if (!payload.name || !payload.email || !payload.message) {
+        status.style.color = 'salmon';
+        status.textContent = 'Please fill in name, email and message.';
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Send Message';
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json().catch(() => ({}));
+
+        if (res.ok) {
+          status.style.color = 'lime';
+          status.textContent = 'Message sent — I will reply soon. ✅';
+          form.reset();
+        } else {
+          status.style.color = 'salmon';
+          status.textContent = data.error || `Failed to send (status ${res.status}).`;
+        }
+      } catch (err) {
+        console.error('Fetch error:', err);
+        status.style.color = 'salmon';
+        status.textContent = 'Network error. Check server.';
+      } finally {
+        sendBtn.disabled = false;
+        sendBtn.textContent = 'Send Message';
+      }
+    });
+  </script>
+
+  <!-- Fade-in fix -->
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-in");
+    });
+  </script>
+</body>
+</html>
